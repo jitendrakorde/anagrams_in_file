@@ -22,12 +22,14 @@ public class Find_Anagrams_In_File {
             Scanner scan = new Scanner(new File("F:\\My_Programs\\test_file.txt"));//please use your file
             while (scan.hasNext()) {
                 String word = scan.next().toLowerCase();
+		word=word.replaceAll("[^a-zA-Z0-9]", "");
                 String alpha = sorting(word);
                 Scanner scan1 = new Scanner(new File("F:\\My_Programs\\test_file.txt"));//please use your file
               
                 while (scan1.hasNext()) {
                 	
                     String word1 = scan1.next().toLowerCase();
+		    word1=word1.replaceAll("[^a-zA-Z0-9]", "");
                     String alpha1 = sorting(word1);
                     if(alpha.equalsIgnoreCase(alpha1))
                     {
